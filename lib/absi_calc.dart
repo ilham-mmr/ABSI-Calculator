@@ -58,23 +58,18 @@ class AbsiCalc with ChangeNotifier {
     return weight / (pow(heightInCM, 2));
   }
 
-  void _calculateABSI() {
+  void calculateABSI() {
     double waistInCM = _convertToM(_waist);
     double bmi = _calculateBMI(_height, _weight);
     double heightInCm = _convertToM(_height);
 
     _absi = waistInCM / (pow(bmi, 2 / 3) * pow(heightInCm, 1 / 2));
+    notifyListeners();
   }
 
-  void _calculateABSIzScore() {
+  void calculateABSIzScore() {
     getABSIData();
     _absiZ = (_absi - _absiMean) / _absiSD;
-  }
-
-  void calculateAbsiAndAbsiZ() {
-    _calculateABSI();
-    _calculateABSIzScore();
-    calculateResult();
     notifyListeners();
   }
 
@@ -90,7 +85,7 @@ class AbsiCalc with ChangeNotifier {
     return _result;
   }
 
-  String calculateResult() {
+  void makeInterpretation() {
     if (_absiZ < -0.868) {
       _result = 'very low 👌';
     } else if (_absiZ >= -0.868 && _absiZ < -0.272) {
@@ -100,9 +95,9 @@ class AbsiCalc with ChangeNotifier {
     } else if (_absiZ >= 0.229 && _absiZ < 0.798) {
       _result = 'high ❗';
     } else if (_absiZ >= 0.798) {
-      _result = '❗❗';
+      _result = 'very high❗❗';
     }
-
-    return _result;
   }
+
+  notifyListeners();
 }

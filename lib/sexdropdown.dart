@@ -19,7 +19,11 @@ class _SexDropDownState extends State<SexDropDown> {
       onChanged: (value) {
         setState(() {
           _dropdownValue = value;
-          Provider.of<AbsiCalc>(context, listen: false).gender = value;
+          AbsiCalc absiCalc = Provider.of<AbsiCalc>(context, listen: false);
+          absiCalc.gender = value;
+          absiCalc.calculateABSI();
+          absiCalc.calculateABSIzScore();
+          absiCalc.makeInterpretation();
         });
       },
       value: _dropdownValue,

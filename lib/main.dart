@@ -203,7 +203,9 @@ class MyApp extends StatelessWidget {
                                   waist: waist,
                                   weight: weight,
                                 );
-                                absiCalc.calculateAbsiAndAbsiZ();
+                                absiCalc.calculateABSI();
+                                absiCalc.calculateABSIzScore();
+                                absiCalc.makeInterpretation();
                               }
                             },
                             child: Text(
