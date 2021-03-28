@@ -1,16 +1,11 @@
-# absi_calc_lab1
+# ABSI CALCULATOR
+absi_calc_lab1
 
-ABSI CALCULATOR.
+## Implementation
+The formulas and data to calculate ABSI are retrieved from [omnicalculator](https://www.omnicalculator.com/health/a-body-shape-index)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Information
+- This project is to fullfill the lab 1 of STIW2044 taught by Mr. Hanis
+- The state management used in this project is Provider.
+  
