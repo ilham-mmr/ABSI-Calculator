@@ -2,7 +2,9 @@
 absi_calc_lab1
 
 ## Implementation
-The formulas and data to calculate ABSI are retrieved from [omnicalculator](https://www.omnicalculator.com/health/a-body-shape-index)
+- The formulas and data to calculate ABSI are retrieved from [omnicalculator](https://www.omnicalculator.com/health/a-body-shape-index)
+- ABSI = WC/ (BMI2/3 * height1/2)
+- ABSI z score = (ABSI - ABSImean) / ABSISD
 
 
 ## Project Information

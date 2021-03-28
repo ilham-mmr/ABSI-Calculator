@@ -18,7 +18,11 @@ class AbsiCalc with ChangeNotifier {
   String gender = 'male';
 
   void setData({age, height, waist, weight}) {
+    //validation for age
+
     this._age = age;
+
+    // no validation atm
     this._height = height;
     this._weight = weight;
     this._waist = waist;
