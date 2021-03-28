@@ -175,7 +175,6 @@ class MyApp extends StatelessWidget {
                               onPrimary: Colors.white, // foreground
                             ),
                             onPressed: () {
-                              print(heightController.text.toString());
                               if (heightController.text == '' ||
                                   weightController.text == '' ||
                                   waistController.text == '' ||
