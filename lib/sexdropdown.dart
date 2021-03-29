@@ -24,6 +24,16 @@ class _SexDropDownState extends State<SexDropDown> {
           absiCalc.calculateABSI();
           absiCalc.calculateABSIzScore();
           absiCalc.makeInterpretation();
+          final snackBar = SnackBar(
+            duration: Duration(seconds: 2),
+            content: Text(value == 'male'
+                ? 'Successfully calculated for male!'
+                : 'Successfully calculated for female!'),
+          );
+
+          // Find the ScaffoldMessenger in the widget tree
+          // and use it to show a SnackBar.
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
         });
       },
       value: _dropdownValue,
